@@ -1,0 +1,36 @@
+/* Attendance Styling */
+.checkin-banner {
+  background: linear-gradient(135deg, #161e2e 0%, #101c2e 100%);
+  border: 1px solid #1e3a8a;
+  border-radius: 16px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.checkin-status-icon {
+  font-size: 3rem;
+  margin-right: 1.5rem;
+}
+
+.checkin-status-icon.checked {
+  color: #10b981;
+}
+
+.checkin-status-icon.not-checked {
+  color: #f59e0b;
+}
+
+.attendance-streak-badge {
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}

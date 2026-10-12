@@ -1,0 +1,70 @@
+/* Memberships Styling */
+.plan-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--gym-card-bg);
+  border: 1px solid var(--gym-border);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.plan-card.featured {
+  border-color: var(--gym-primary);
+  box-shadow: 0 0 25px rgba(13, 110, 253, 0.2);
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--gym-electric);
+}
+
+.plan-badge-featured {
+  position: absolute;
+  top: 15px;
+  right: -30px;
+  background: var(--gym-primary);
+  color: #ffffff;
+  padding: 4px 35px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transform: rotate(45deg);
+}
+
+.plan-price {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.plan-duration {
+  color: var(--gym-text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.plan-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  flex-grow: 1;
+}
+
+.plan-features-list li {
+  padding: 0.45rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: #d1d5db;
+  font-size: 0.92rem;
+}
+
+.plan-features-list li i {
+  color: var(--gym-electric);
+  font-size: 1.1rem;
+}

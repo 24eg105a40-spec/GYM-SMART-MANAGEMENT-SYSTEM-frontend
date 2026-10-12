@@ -1,0 +1,611 @@
+/* ============================================================
+   SMART GYM MANAGEMENT - CLEAN & MODERN DESIGN SYSTEM
+   Theme: Light, Minimal, Professional Layout
+   Palette: Slate / Crisp White with Subtle Blue & Emerald Accents
+   ============================================================ */
+
+:root {
+  /* Surfaces & Backgrounds */
+  --gym-bg: #f8fafc;
+  --gym-surface: #ffffff;
+  --gym-surface-card: #ffffff;
+  --gym-surface-hover: #f1f5f9;
+  --gym-surface-muted: #f8fafc;
+
+  /* Borders & Dividers */
+  --gym-border: #e2e8f0;
+  --gym-border-light: #f1f5f9;
+  --gym-border-focus: #0284c7;
+
+  /* Accents */
+  --gym-primary: #0284c7;
+  --gym-primary-hover: #0369a1;
+  --gym-primary-subtle: #f0f9ff;
+  --gym-primary-border: #bae6fd;
+
+  --gym-accent: #059669;
+  --gym-accent-hover: #047857;
+  --gym-accent-subtle: #ecfdf5;
+  --gym-accent-border: #a7f3d0;
+
+  --gym-lime: #059669;
+  --gym-lime-dark: #047857;
+  --gym-lime-glow: rgba(5, 150, 105, 0.15);
+
+  /* Functional Status */
+  --gym-success: #16a34a;
+  --gym-warning: #d97706;
+  --gym-danger: #dc2626;
+  --gym-info: #0284c7;
+
+  /* Typography */
+  --gym-text-primary: #0f172a;
+  --gym-text-secondary: #475569;
+  --gym-text-muted: #94a3b8;
+  --gym-font-heading: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --gym-font-body: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Elevation & Shadows */
+  --gym-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --gym-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
+  --gym-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+  --gym-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.03);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--gym-font-body);
+  background-color: var(--gym-bg);
+  color: var(--gym-text-primary);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--gym-font-heading);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--gym-text-primary);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+
+.btn-gym-primary, .btn-lime {
+  background-color: var(--gym-primary);
+  color: #ffffff !important;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: 1px solid var(--gym-primary);
+  padding: 0.55rem 1.25rem;
+  border-radius: 8px;
+  transition: all 0.15s ease-in-out;
+  box-shadow: var(--gym-shadow-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+}
+
+.btn-gym-primary:hover, .btn-lime:hover {
+  background-color: var(--gym-primary-hover);
+  border-color: var(--gym-primary-hover);
+  color: #ffffff !important;
+  box-shadow: var(--gym-shadow-md);
+  transform: translateY(-1px);
+}
+
+.btn-gym-primary:active, .btn-lime:active {
+  transform: translateY(0);
+}
+
+.btn-gym-outline, .btn-lime-outline {
+  background-color: #ffffff;
+  color: var(--gym-text-secondary) !important;
+  border: 1px solid var(--gym-border);
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 0.55rem 1.25rem;
+  border-radius: 8px;
+  transition: all 0.15s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+}
+
+.btn-gym-outline:hover, .btn-lime-outline:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+  color: var(--gym-text-primary) !important;
+  transform: translateY(-1px);
+}
+
+.btn-dark-glass, .btn-gym-secondary {
+  background-color: #f1f5f9;
+  color: var(--gym-text-secondary) !important;
+  border: 1px solid #e2e8f0;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 0.55rem 1.25rem;
+  border-radius: 8px;
+  transition: all 0.15s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+}
+
+.btn-dark-glass:hover, .btn-gym-secondary:hover {
+  background-color: #e2e8f0;
+  color: var(--gym-text-primary) !important;
+  transform: translateY(-1px);
+}
+
+/* ============================================================
+   CARDS & CONTAINERS
+   ============================================================ */
+
+.gym-card {
+  background-color: var(--gym-surface-card);
+  border: 1px solid var(--gym-border);
+  border-radius: 12px;
+  box-shadow: var(--gym-shadow);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.gym-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: var(--gym-shadow-md);
+}
+
+.gym-card-interactive {
+  cursor: pointer;
+}
+
+.gym-card-interactive:hover {
+  transform: translateY(-2px);
+  border-color: var(--gym-primary-border);
+  box-shadow: var(--gym-shadow-md);
+}
+
+.gym-card-header {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--gym-border);
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gym-card-body {
+  padding: 1.25rem;
+}
+
+/* Stat Widgets */
+.stat-widget, .stat-widget-premium {
+  background-color: #ffffff;
+  border: 1px solid var(--gym-border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: var(--gym-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.15s ease;
+}
+
+.stat-widget:hover, .stat-widget-premium:hover {
+  border-color: #cbd5e1;
+  box-shadow: var(--gym-shadow-md);
+  transform: translateY(-1px);
+}
+
+.stat-icon, .stat-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+/* ============================================================
+   STATUS BADGES
+   ============================================================ */
+
+.badge-status {
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  text-transform: capitalize;
+}
+
+.badge-active, .badge-verified, .badge-confirmed, .badge-present, .badge-completed, .badge-approved {
+  background-color: #ecfdf5 !important;
+  color: #047857 !important;
+  border: 1px solid #a7f3d0 !important;
+}
+
+.badge-pending, .badge-in_progress, .badge-excused {
+  background-color: #fffbeb !important;
+  color: #b45309 !important;
+  border: 1px solid #fde68a !important;
+}
+
+.badge-expired, .badge-cancelled, .badge-canceled, .badge-rejected, .badge-failed, .badge-absent, .badge-inactive, .badge-refunded {
+  background-color: #fef2f2 !important;
+  color: #b91c1c !important;
+  border: 1px solid #fecaca !important;
+}
+
+/* ============================================================
+   TABLES & FORMS
+   ============================================================ */
+
+.gym-table-container {
+  background-color: #ffffff;
+  border: 1px solid var(--gym-border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--gym-shadow);
+}
+
+.gym-table {
+  width: 100%;
+  color: var(--gym-text-primary);
+  margin-bottom: 0;
+  border-collapse: collapse;
+}
+
+.gym-table thead th {
+  background-color: #f8fafc;
+  color: #475569;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--gym-border);
+}
+
+.gym-table tbody td {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid var(--gym-border-light);
+  vertical-align: middle;
+  font-size: 0.88rem;
+  color: #334155;
+}
+
+.gym-table tbody tr:hover td {
+  background-color: #f8fafc;
+}
+
+.gym-input, .gym-select {
+  background-color: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
+  color: #0f172a !important;
+  border-radius: 8px !important;
+  padding: 0.6rem 0.85rem !important;
+  font-size: 0.9rem !important;
+  transition: all 0.15s ease-in-out !important;
+}
+
+.gym-input:focus, .gym-select:focus {
+  border-color: var(--gym-primary) !important;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15) !important;
+  background-color: #ffffff !important;
+  outline: none !important;
+}
+
+.gym-input::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* ============================================================
+   SIDEBAR & DASHBOARD SHELL
+   ============================================================ */
+
+.dashboard-shell {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--gym-bg);
+}
+
+.dashboard-sidebar {
+  width: 260px;
+  background-color: #ffffff;
+  border-right: 1px solid var(--gym-border);
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  z-index: 1020;
+  transition: transform 0.2s ease-in-out;
+}
+
+.sidebar-brand {
+  padding: 1.25rem;
+  border-bottom: 1px solid var(--gym-border);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.sidebar-nav-container {
+  padding: 1rem 0.75rem;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.sidebar-section-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #94a3b8;
+  padding: 0 0.75rem;
+  margin-bottom: 0.4rem;
+  margin-top: 0.85rem;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.55rem 0.75rem;
+  border-radius: 8px;
+  color: #475569;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: all 0.15s ease;
+  margin-bottom: 0.2rem;
+}
+
+.sidebar-link:hover {
+  color: #0f172a;
+  background-color: #f1f5f9;
+}
+
+.sidebar-link.active {
+  color: var(--gym-primary);
+  background-color: var(--gym-primary-subtle);
+  font-weight: 600;
+  border: 1px solid var(--gym-primary-border);
+}
+
+.sidebar-link i {
+  font-size: 1.1rem;
+  min-width: 20px;
+}
+
+.sidebar-footer {
+  padding: 0.85rem 1rem;
+  border-top: 1px solid var(--gym-border);
+  background-color: #f8fafc;
+}
+
+.dashboard-main-area {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.dashboard-topbar {
+  height: 64px;
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--gym-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1010;
+}
+
+.dashboard-content {
+  padding: 1.5rem 1.75rem 2.5rem 1.75rem;
+  flex-grow: 1;
+}
+
+.dashboard-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.25rem;
+}
+
+.dashboard-subtitle {
+  font-size: 0.88rem;
+  color: #64748b;
+  margin-bottom: 0;
+}
+
+/* Ensure readable text in light mode cards and tables */
+.gym-card, .gym-table, .modal-content {
+  color: var(--gym-text-primary);
+}
+
+.gym-card .text-white,
+.gym-table .text-white,
+.modal-content .text-white {
+  color: var(--gym-text-primary) !important;
+}
+
+.gym-card .modal-content,
+.modal-content.gym-card {
+  background-color: #ffffff !important;
+  color: var(--gym-text-primary) !important;
+  border: 1px solid var(--gym-border) !important;
+  box-shadow: var(--gym-shadow-lg) !important;
+}
+
+.modal-content .btn-close-white {
+  filter: none !important;
+}
+
+.modal-header, .modal-footer {
+  border-color: var(--gym-border) !important;
+}
+
+.input-group-text.bg-dark {
+  background-color: #f8fafc !important;
+  border-color: #cbd5e1 !important;
+  color: #64748b !important;
+}
+
+/* Plan Cards */
+.plan-card {
+  background-color: #ffffff;
+  border: 1px solid var(--gym-border);
+  border-radius: 14px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  box-shadow: var(--gym-shadow);
+  transition: all 0.2s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-3px);
+  border-color: #cbd5e1;
+  box-shadow: var(--gym-shadow-md);
+}
+
+.plan-card.featured {
+  border: 2px solid var(--gym-primary);
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.12);
+}
+
+.plan-badge-featured {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background-color: var(--gym-primary);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+  letter-spacing: 0.05em;
+}
+
+.plan-price {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0.75rem 0 0.25rem 0;
+}
+
+.plan-duration {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 1.25rem;
+}
+
+.plan-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.plan-features-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  color: #334155;
+  margin-bottom: 0.65rem;
+}
+
+.plan-features-list li i {
+  color: var(--gym-accent);
+  font-size: 0.95rem;
+}
+
+/* Auth Cards */
+.auth-wrapper {
+  min-height: calc(100vh - 140px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gym-bg);
+}
+
+.auth-card {
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid var(--gym-border);
+  border-radius: 14px;
+  padding: 2rem;
+  box-shadow: var(--gym-shadow-md);
+}
+
+/* Animations & Spinners */
+.spin-anim {
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 991.98px) {
+  .dashboard-sidebar {
+    position: fixed;
+    left: -280px;
+    top: 0;
+    bottom: 0;
+    box-shadow: 10px 0 25px rgba(0, 0, 0, 0.15);
+  }
+  .dashboard-sidebar.show-mobile {
+    transform: translateX(280px);
+  }
+  .sidebar-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 23, 42, 0.4);
+    z-index: 1015;
+  }
+  .dashboard-content {
+    padding: 1.25rem 1rem 2rem 1rem;
+  }
+}

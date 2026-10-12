@@ -1,0 +1,58 @@
+/* Workouts Styling */
+.exercise-card {
+  background: #141820;
+  border: 1px solid var(--gym-border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.exercise-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.exercise-order-badge {
+  background: rgba(13, 110, 253, 0.2);
+  color: var(--gym-primary);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.exercise-metrics {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.metric-chip {
+  background: #1a202c;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  color: #e2e8f0;
+  border: 1px solid #2d3748;
+}
+
+.metric-chip strong {
+  color: var(--gym-electric);
+}
+
+.exercise-instructions {
+  background: #0f131a;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: var(--gym-text-muted);
+  font-style: italic;
+  border-left: 3px solid var(--gym-primary);
+}

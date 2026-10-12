@@ -1,0 +1,62 @@
+/* Dashboard Styling */
+.dashboard-header {
+  margin-bottom: 2rem;
+}
+
+.dashboard-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+
+.dashboard-subtitle {
+  color: var(--gym-text-muted);
+  font-size: 0.95rem;
+}
+
+.quick-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: #141922;
+  border: 1px solid var(--gym-border);
+  border-radius: 12px;
+  color: var(--gym-text-main);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.quick-action-btn:hover {
+  background: #1c222e;
+  border-color: var(--gym-primary);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.quick-action-icon {
+  font-size: 1.4rem;
+  color: var(--gym-electric);
+}
+
+.dashboard-widget-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.activity-item {
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--gym-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
